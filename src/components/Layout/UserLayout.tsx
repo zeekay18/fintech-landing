@@ -11,7 +11,7 @@ import "./UserLayout.less";
 
 const UserLayout = () => {
   return (
-    <Container fluid id="app-user-layout">
+    <div id="app-user-layout">
       <div className="user-content">
         <Switch>
           {userRouter
@@ -28,7 +28,7 @@ const UserLayout = () => {
           <Redirect from="/" to={`${ROUTES.landingPage}`} />
         </Switch>
       </div>
-    </Container>
+    </div>
   );
 };
 

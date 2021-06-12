@@ -1,0 +1,48 @@
+@import "../../theme/typography.less";
+@import "../../theme/variables.less";
+
+#featured-services {
+  .icon-container {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+
+    background-color: @lemon2;
+  }
+
+  .title {
+    .h5Text();
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    margin-top: 40px;
+  }
+
+  .description {
+    .body1Text();
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    margin-top: 30px;
+  }
+
+  .services {
+    .body1Text();
+    margin-top: 30px;
+    font-weight: 500;
+    .service-item {
+      .check-mark {
+        color: @greenPrimary;
+        margin-right: 16px;
+      }
+    }
+  }
+}
