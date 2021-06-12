@@ -1,6 +1,7 @@
 import React from "react";
 import CardTypeServices from "../../components/CardTypesServices";
 import AppHeader from "../../components/Header";
+import WhyUsSection from "../../components/whyUs";
 
 import "./index.less";
 
@@ -12,6 +13,8 @@ const LandingPage = () => {
         <h2> Welcome landing page</h2>
 
         <CardTypeServices />
+
+        <WhyUsSection />
       </main>
     </div>
   );
