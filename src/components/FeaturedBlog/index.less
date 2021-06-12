@@ -1,0 +1,32 @@
+@import "../../theme/typography.less";
+@import "../../theme/variables.less";
+
+#featured-blog {
+  padding-right: 15%;
+  .caption {
+    .captionText();
+    font-weight: 600;
+  }
+
+  .title {
+    .h3Text();
+    font-weight: bold;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  .description {
+    .body1Text();
+    margin-top: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+}

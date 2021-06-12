@@ -1,0 +1,66 @@
+@import "../../theme/typography.less";
+@import "../../theme/variables.less";
+
+.app-button {
+  border-radius: 5px;
+  width: 114px;
+
+  .body1Text();
+  color: @white;
+
+  &.ant-btn-lg {
+    height: 48px;
+  }
+
+  &.primary-button {
+    background-color: @greenPrimary;
+
+    &.button-disabled {
+      background-color: @black5;
+      color: @white;
+    }
+
+    &:hover {
+      background-color: @green1;
+    }
+
+    &:focus {
+      background-color: @greenPrimary;
+    }
+  }
+
+  &.default-button {
+    background-color: @white;
+    border: 1px solid @greenPrimary;
+    color: @greenPrimary;
+
+    &.button-disabled {
+      border: 1px solid @black4;
+      color: @black4;
+    }
+
+    &:hover {
+      border: 1px solid @green1;
+    }
+
+    &:focus {
+      border: 1.5px solid @green1;
+    }
+  }
+
+  &.text-button {
+    color: @greenPrimary;
+
+    &.button-disabled {
+      color: @black4;
+    }
+
+    &:hover {
+      color: @green1;
+    }
+
+    &:focus {
+      color: @green1;
+    }
+  }
+}
