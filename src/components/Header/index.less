@@ -2,18 +2,61 @@
 @import "../../theme/variables.less";
 
 #app-header {
-  background-color: #ff0;
-  height: 64px;
+  &.navbar {
+    background-color: @white;
+    box-shadow: 10px 0px 25px rgba(21, 21, 21, 0.05);
 
-  .navbar-nav {
-    .nav-link {
-      .h5Text();
-      text-decoration: none;
+    padding-left: 60px;
+    padding-right: 60px;
 
-      background-color: #f00;
-      margin-left: 10px;
-      margin-right: 10px;
-      padding: 10px;
+    height: 80px;
+
+    .navbar-nav {
+      .nav-link {
+        padding: 5px 10px;
+
+        .h6Text();
+        text-decoration: none;
+
+        margin-left: 10px;
+        margin-right: 10px;
+
+        &.sign-up-link {
+          .h6Text();
+          font-weight: 600;
+        }
+        &.login-link {
+          .h6Text();
+          font-weight: 600;
+          color: @white;
+          background-color: @black1;
+        }
+
+        &.active {
+          background-color: @black2;
+          color: @white;
+        }
+      }
+    }
+
+    .navbar-brand {
+      .h4Text();
+      font-weight: bold;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    &.navbar {
+      padding-left: 10px;
+      padding-right: 10px;
+      .navbar-nav {
+        .nav-link {
+          &.login-link {
+            color: @black1;
+            background-color: @white;
+          }
+        }
+      }
     }
   }
 }
