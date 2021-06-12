@@ -10,7 +10,12 @@ import {
   faHome,
 } from "@fortawesome/free-solid-svg-icons";
 
+import getStartedLogo from "../../images/get-started-logo.png";
+import securityBlogLogo from "../../images/security-blog-logo.png";
+import cashFlowBlogLogo from "../../images/cash-flow-logo.png";
+
 import "./index.less";
+import FeaturedBlog from "../../components/FeaturedBlog";
 
 const featuredServices = [
   {
@@ -58,7 +63,20 @@ const LandingPage = () => {
         <div className="section">
           <CardTypeServices />
         </div>
-
+        <div className="section">
+          <Row>
+            <Col lg={6} className="d-none d-lg-block">
+              <img className="feature-blog-image" src={getStartedLogo} />
+            </Col>
+            <Col lg={6}>
+              <FeaturedBlog
+                caption="Why its' important"
+                title="Great Start With Mony"
+                description="Ultrices natoque mus mattis, aliquam, cras in pellentesque tincidunt elit purus lectus, vel ut aliquet, elementum nunc"
+              />
+            </Col>
+          </Row>
+        </div>
         <div className="section">
           <WhyUsSection />
         </div>
@@ -75,6 +93,37 @@ const LandingPage = () => {
             </Col>
           ))}
         </Row>
+
+        <div className="section">
+          <Row>
+            <Col lg={6} className="d-none d-lg-block">
+              <img className="feature-blog-image" src={securityBlogLogo} />
+            </Col>
+            <Col lg={6}>
+              <FeaturedBlog
+                caption="Hi Security and Protection"
+                title="Custom Protection and Safe Transaction"
+                description="Ultrices natoque mus mattis, aliquam, cras in pellentesque tincidunt elit purus lectus, vel ut aliquet, elementum nunc"
+              />
+            </Col>
+          </Row>
+        </div>
+
+        <div className="section">
+          <Row>
+            <Col lg={6} className="d-none d-lg-block">
+              <img className="feature-blog-image" src={cashFlowBlogLogo} />
+            </Col>
+            <Col lg={6}>
+              <FeaturedBlog
+                caption="Everything Under Control"
+                title="Be Smart Manage Your Cash Flow"
+                description="Ultrices natoque mus mattis, aliquam, cras in pellentesque tincidunt elit purus lectus, vel ut aliquet, elementum nunc"
+                extraText={"See How"}
+              />
+            </Col>
+          </Row>
+        </div>
       </div>
     </Container>
   );
