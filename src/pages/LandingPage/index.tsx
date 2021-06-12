@@ -9,6 +9,7 @@ import {
   faBusinessTime,
   faHome,
 } from "@fortawesome/free-solid-svg-icons";
+import Slider from "../../components/Slider";
 
 import getStartedLogo from "../../images/get-started-logo.png";
 import securityBlogLogo from "../../images/security-blog-logo.png";
@@ -55,10 +56,11 @@ const featuredServices = [
 
 const LandingPage = () => {
   return (
-    <Container id="landing-page">
-      <AppHeader />
+    <Container id="landing-page" fluid>
+      <div className="d-none-custom" id="home"></div>
+      <AppHeader  />
       <div id="main-content">
-        <h2> Welcome landing page</h2>
+      <Slider></Slider>
 
         <div className="section">
           <CardTypeServices />
@@ -81,7 +83,7 @@ const LandingPage = () => {
           <WhyUsSection />
         </div>
 
-        <Row className="section">
+        <Row className="section" id="features">
           {featuredServices?.map((service, index) => (
             <Col lg={4} key={index} className="featured-services">
               <FeaturedService
@@ -94,7 +96,7 @@ const LandingPage = () => {
           ))}
         </Row>
 
-        <div className="section">
+        <div className="section" id="about">
           <Row>
             <Col lg={6} className="d-none d-lg-block">
               <img className="feature-blog-image" src={securityBlogLogo} />
@@ -126,6 +128,7 @@ const LandingPage = () => {
         </div>
       </div>
     </Container>
+      
   );
 };
 
