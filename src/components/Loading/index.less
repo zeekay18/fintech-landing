@@ -1,0 +1,35 @@
+@import "../../theme/variables";
+@import "../../theme/typography";
+
+#app-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: @white;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999999;
+
+  .animated-logo {
+    -webkit-animation: rotatePlane 1s infinite ease-in-out;
+    animation: rotatePlane 1s infinite ease-in-out;
+  }
+
+  @keyframes rotatePlane {
+    0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+  }
+}
